@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Depends
 from backend.Seasons import crud
-from datetime import date
+from datetime import datetime
 from backend.Seasons.schemas import SeasonCreate, SeasonUpdate, SeasonOut
 from backend.app.auth.deps import get_current_user  # импорт функции, которая извлекает юзера из токена
 import json
