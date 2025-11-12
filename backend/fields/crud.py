@@ -5,8 +5,7 @@ import json
 
 @db_session
 def create_field(user_id: int, name: str, area_ha: float, points: list[dict], soil_type: str | None):
-    # Проверяем, что пользователь существует
-    user = User.get(id=user_id)
+    user = User.get(id=user_id) # Проверяем, что пользователь существует
     if not user:
         raise ValueError("Пользователь не найден")
 
